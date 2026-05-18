@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.reshmenammapride.WelcomeFragment"
+        android:label="Welcome"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.reshmenammapride.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.example.reshmenammapride.SignupFragment"
+        android:label="Sign Up"
+        tools:layout="@layout/fragment_signup">
+        <action
+            android:id="@+id/action_signupFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.reshmenammapride.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/climateFragment"
+        android:name="com.example.reshmenammapride.ClimateFragment"
+        android:label="Climate Monitor"
+        tools:layout="@layout/fragment_climate" />
+
+    <fragment
+        android:id="@+id/breedInfoFragment"
+        android:name="com.example.reshmenammapride.BreedInfoFragment"
+        android:label="Breeds"
+        tools:layout="@layout/fragment_breed_info" />
+
+    <fragment
+        android:id="@+id/conditionFragment"
+        android:name="com.example.reshmenammapride.ConditionFragment"
+        android:label="Health Guide"
+        tools:layout="@layout/fragment_condition" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.reshmenammapride.HistoryFragment"
+        android:label="History"
+        tools:layout="@layout/fragment_history" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.reshmenammapride.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/weatherFragment"
+        android:name="com.example.reshmenammapride.WeatherFragment"
+        android:label="Weather Guide" />
+
+    <fragment
+        android:id="@+id/seasonsFragment"
+        android:name="com.example.reshmenammapride.SeasonsFragment"
+        android:label="Seasons Guide" />
+</navigation>
